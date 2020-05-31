@@ -1,0 +1,21 @@
+add_library(base
+		algebra.h
+		common.h
+		config.h
+		enum_db.h
+		exception.hpp
+		io_util.h
+		io_util.cpp
+		logger.cpp
+		logger.h
+		macros.h
+		math.h
+		platform.h
+		random.h
+		str.cpp
+		str.h
+		thread_pool.cpp
+		thread_pool.h
+		timer.h
+		serial.h
+		str-hash.h)

@@ -1,0 +1,16 @@
+add_library(optimizer
+		optimizer.h
+		opt_sgd.cpp
+		opt_ada_grad.cpp
+		opt_rms_prop.cpp
+		opt_adam.cpp
+		opt_momentum.cpp
+		opt_adam_unbiased.cpp
+		opt_ams_grad.cpp)
+target_compile_options(optimizer
+		PUBLIC
+		-fno-math-errno
+		$<$<CONFIG:Debug>:-Og>
+		$<$<CONFIG:Release>:-O3>
+		$<$<CONFIG:RelWithDbgInfo>:-O3>
+		)
