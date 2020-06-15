@@ -68,11 +68,13 @@ def best_metric(summ):
 
 
 opts = ['sgd', 'adagrad', 'rmsprop', 'adam', 'adam-unbias', 'amsgrad', 'momentum']
-models = ['LM', 'FM', 'FFM', 'HOFM']
+models = ['HOFM', 'FFM']
+# models = ['LM', 'FM', 'FFM', 'HOFM']
 # models = ['HOFM']
 
-data_dir = '/home/lz1008/Homework/GD/PyProject/data/ml-100k/'
-input_file = path.join(data_dir, 'my.ffm')
+# data_dir = '/home/lz1008/Homework/GD/PyProject/data/ml-100k/'
+data_dir = '/home/lz1008/Downloads/dac/'
+input_file = path.join(data_dir, 'train-1m.ffm')
 task = '--binary'
 metric = 'auc'
 epochs = 50

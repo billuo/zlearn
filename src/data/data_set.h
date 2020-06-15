@@ -38,8 +38,8 @@ class DataSet : public std::enable_shared_from_this<DataSet> {
 				}
 		}
 
-		std::shared_ptr<DataSet> train_test_split(int train_share,
-												  int test_share);
+		std::shared_ptr<DataSet>
+		train_test_split(int train_share, int test_share, bool shuffle);
 
 		void serialize(String filename);
 		void deserialize(String filename);

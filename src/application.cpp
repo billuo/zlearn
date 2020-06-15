@@ -283,7 +283,8 @@ int Application::run() {
 						logger::info("splitting input into train:test={}:{}",
 									 train_share, test_share);
 						test_data = train_data->train_test_split(
-							std::stoi(train_share), std::stoi(test_share));
+							std::stoi(train_share), std::stoi(test_share),
+							false);
 						if (!dump_train.empty()) {
 								logger::info("dumping split train data to {}",
 											 dump_train.c_str());

@@ -10,9 +10,12 @@
 
 NAMESPACE_BEGIN
 
-std::shared_ptr<DataSet> DataSet::train_test_split(int train_share,
-												   int test_share) {
-		std::shuffle(m_entries.begin(), m_entries.end(), random_generator());
+std::shared_ptr<DataSet>
+DataSet::train_test_split(int train_share, int test_share, bool shuffle) {
+		if (shuffle)
+				std::shuffle(m_entries.begin(), m_entries.end(),
+							 random_generator());
+
 		auto split_at = m_entries.begin()
 			+ m_entries.size() * test_share / (test_share + train_share);
 		Entries test_entries(std::make_move_iterator(split_at),
